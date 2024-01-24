@@ -11,7 +11,7 @@ const Paginate = (props: PaginateProps) => {
     return (
         <div className="flex">
             {Array.from({ length: Math.ceil(props.characters.length / props.charactersPerPage) }).map((_, index) => (
-                <button className={`text-white bg-black ${active==index && 'bg-[red]'} p-3 ml-2`} key={index} onClick={(event) => {setActive(index);props.paginate(index + 1)}}>
+                <button className={`text-white  ${active==index ? ' bg-[red]' : ' bg-black '} p-3 ml-2`} key={index} onClick={(event) => {setActive(index);props.paginate(index + 1)}}>
                     {index + 1}
                 </button>
 
