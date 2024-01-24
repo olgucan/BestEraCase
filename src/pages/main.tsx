@@ -72,7 +72,7 @@ const Main = () => {
             <div>
                
                 <div className='text-center flex gap-2 justify-center md:flex-row flex-col'>
-                    <Paginate characters={characters} paginate={paginate} charactersPerPage={charactersPerPage} />
+                    <Paginate characters={filteredNew} paginate={paginate} charactersPerPage={charactersPerPage} />
 
                     <FilterOptions setFilteredValue={setFilteredValue} />
                     <ExportExcel excelData={currentCharacters} fileName='dads' />
